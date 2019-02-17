@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxMVVMExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-qO-gzu">
+                                <rect key="frame" x="50" y="101" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="address-level2"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current weather in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDw-AC-25Z">
+                                <rect key="frame" x="50" y="70" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmF-Hy-p67">
+                                <rect key="frame" x="169" y="219" width="37.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pcn-ej-EUa">
+                                <rect key="frame" x="109" y="141" width="157" height="29"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnU-ta-njh">
+                                <rect key="frame" x="30" y="269" width="315" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MnU-ta-njh" secondAttribute="trailing" constant="30" id="BMK-pF-hJP"/>
+                            <constraint firstItem="YmF-Hy-p67" firstAttribute="top" secondItem="Pcn-ej-EUa" secondAttribute="bottom" constant="50" id="CpB-CU-76x"/>
+                            <constraint firstItem="MnU-ta-njh" firstAttribute="top" secondItem="YmF-Hy-p67" secondAttribute="bottom" constant="20" id="PNF-Om-ULZ"/>
+                            <constraint firstItem="Pcn-ej-EUa" firstAttribute="top" secondItem="mBC-qO-gzu" secondAttribute="bottom" constant="10" id="ZIe-Cg-bHZ"/>
+                            <constraint firstItem="mBC-qO-gzu" firstAttribute="top" secondItem="qDw-AC-25Z" secondAttribute="bottom" constant="10" id="aM0-06-fVq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mBC-qO-gzu" secondAttribute="trailing" constant="50" id="bZI-Ox-A8s"/>
+                            <constraint firstItem="Pcn-ej-EUa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="efc-P8-nHJ"/>
+                            <constraint firstItem="qDw-AC-25Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="h1U-pB-Mm0"/>
+                            <constraint firstItem="mBC-qO-gzu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iVz-jf-ZlE"/>
+                            <constraint firstItem="MnU-ta-njh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rQg-wb-cah"/>
+                            <constraint firstItem="YmF-Hy-p67" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rs2-cM-2rU"/>
+                            <constraint firstItem="qDw-AC-25Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="svV-Wg-AAp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qDw-AC-25Z" secondAttribute="trailing" constant="50" id="uM6-pR-aWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="mBC-qO-gzu" id="W09-Ee-CqF"/>
+                        <outlet property="fullPlaceNameLabel" destination="MnU-ta-njh" id="0A3-sh-GfA"/>
+                        <outlet property="scaleSegmentedControl" destination="Pcn-ej-EUa" id="L4Q-8k-TmS"/>
+                        <outlet property="valueLabel" destination="YmF-Hy-p67" id="4Ws-mV-JuX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
